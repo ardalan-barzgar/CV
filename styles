@@ -1,0 +1,137 @@
+/* Global styles */
+body {
+    font-family: Comic Sans MS;
+    background-color: white;
+    background-image: url("mountains.jpg");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+
+/* Error text style */
+span.error {
+    color: #ff0000;
+}
+
+/* Heading styles */
+h1 {
+    color: orange;
+}
+
+h2 {
+    color: or;
+}
+
+/* Paragraph styles */
+p {
+    color: black;
+}
+
+/* Link styles */
+a {
+    font-weight: bold;
+}
+a:link {
+    color: #0C3862;
+}
+a:visited {
+    color: #545454;
+}
+a:hover {
+    color: #00472E;
+}
+a:active {
+    color: #0C3862;
+}
+
+/* Flexbox container for columns */
+.columns-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+/* Container styles */
+.container {
+    display: none; /* Hide all containers by default */
+    padding: 50px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    background-size: auto;
+    width: 350px;
+    height: 120px;
+    transition: transform 0.5s ease;
+}
+
+/* Make the visible container show up */
+.container.visible {
+    display: block;
+}
+
+/* Arrow styles */
+.arrow {
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    color: black;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+/* Background images for containers */
+.container1 {
+    background-image: url("work.png");
+    background-size: 450px 230px;
+}
+
+.container2 {
+    background-image: url("education.jpg");
+    background-size: 450px 230px;
+}
+
+.container3 {
+    background-image: url("project.png");
+    background-size: 450px 230px;
+}
+
+.container4 {
+    background-image: url("leadership.jpg");
+    background-size: 450px 230px;
+}
+
+/* Button styles */
+.button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 80%;
+}
+
+/* Hover effect for buttons */
+.button:hover {
+    background-color: gray;
+}
