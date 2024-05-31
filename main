@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+<h1>Ardalan Barzgar</h1>
+<p>Auckland | 021-085-32442 | Ardalan1012@gmail.com | <a href="https://www.linkedin.com/in/ardalan-barzgar/">LinkedIn</a></p>
+    
+<div class="columns-container">
+    <div class="container container1 visible">
+        <span class="arrow left-arrow" onclick="moveLeft()">&#9664;</span>
+        <h2>Work Experience</h2>
+        <span class="arrow right-arrow" onclick="moveRight()">&#9654;</span>
+    </div>
+    <div class="container container2">
+        <span class="arrow left-arrow" onclick="moveLeft()">&#9664;</span>
+        <h2>Education</h2>
+        <span class="arrow right-arrow" onclick="moveRight()">&#9654;</span>
+    </div>
+    <div class="container container3">
+        <span class="arrow left-arrow" onclick="moveLeft()">&#9664;</span>
+        <h2>Project Experience</h2>
+        <span class="arrow right-arrow" onclick="moveRight()">&#9654;</span>
+    </div>
+    <div class="container container4">
+        <span class="arrow left-arrow" onclick="moveLeft()">&#9664;</span>
+        <h2>Leadership Experience</h2>
+        <span class="arrow right-arrow" onclick="moveRight()">&#9654;</span>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        let currentIndex = 0;
+        const containers = document.querySelectorAll('.container');
+
+        function updateVisibility() {
+            containers.forEach((container, index) => {
+                if (index === currentIndex) {
+                    container.classList.add('visible');
+                } else {
+                    container.classList.remove('visible');
+                }
+            });
+        }
+
+        function moveLeft() {
+            currentIndex = (currentIndex - 1 + containers.length) % containers.length;
+            updateVisibility();
+        }
+
+        function moveRight() {
+            currentIndex = (currentIndex + 1) % containers.length;
+            updateVisibility();
+        }
+
+        // Initialize visibility on page load
+        updateVisibility();
+
+        // Make moveLeft and moveRight functions available globally for onclick attributes
+        window.moveLeft = moveLeft;
+        window.moveRight = moveRight;
+    });
+</script>
+
+</body>
+</html>
